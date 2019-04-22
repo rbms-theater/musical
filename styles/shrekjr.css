@@ -12,7 +12,6 @@ body {
   margin: 0;
   color: #12290e;
   background-color: #f2f5e2;
-  scroll-behavior: smooth;
 }
 .larger {
   font-size: calc(100% * 1.25);
@@ -49,11 +48,15 @@ nav .menu-items div {
   color: #f2f5e2;
   font-weight: bold;
 }
+nav .menu-items .active {
+  color: #e1e707;
+}
 .content-wrapper {
   height: 100vh;
-  max-width: 650px;
   overflow-y: auto;
   margin-top: 48px;
+  max-width: 650px;
+  scroll-behavior: smooth;
 }
 .content-wrapper .content-bg {
   background: #f2f5e2;
@@ -127,10 +130,10 @@ ul.music li:after {
   content: '\201D';
 }
 .intermission {
-  background-color: rgba(153,0,51,0.125);
+  background-color: rgba(0,128,0,0.125);
   display: inline-block;
   margin: 0 auto;
-  padding: 4px;
+  padding: 4px 24px;
 }
 .intermission-note {
   font-weight: normal;
@@ -226,9 +229,10 @@ footer a:visited {
   align-items: stretch;
 }
 .people .participant {
-  width: 30.5%;
+  min-width: 117px;
+  max-width: 117px;
   padding: 0;
-  margin: 4px;
+  margin: 4px 4px 8px 4px;
   text-align: center;
   background-color: rgba(255,255,255,0.75);
   border: 1px solid #bfdb1b;
@@ -317,4 +321,7 @@ table td.name {
 }
 #profileModal .bio {
   padding: 4px 16px 16px 16px;
+}
+.close-modal {
+  background-image: url("../images/close-icon.png") !important;
 }

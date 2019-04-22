@@ -11,7 +11,6 @@ body
     margin: 0
     color: #12290E
     background-color: rgba(242,245,226,1)
-    scroll-behavior: smooth
 
 .larger
     font-size: calc(100% * 1.25)
@@ -44,12 +43,15 @@ nav
             text-align: center
             color: rgba(242,245,226,1)
             font-weight: bold
+        .active
+            color: #e1e707
 
 .content-wrapper
     height: 100vh
-    max-width: 650px
     overflow-y: auto
     margin-top: 48px
+    max-width: 650px
+    scroll-behavior: smooth
     .content-bg
         background: rgb(242,245,226)
         background: linear-gradient(180deg, rgba(242,245,226,1) 50%, rgba(211,217,141,1) 75%, rgba(185,194,68,1) 100%)
@@ -104,10 +106,10 @@ ul.music
             content: '\201D'
 
 .intermission
-    background-color: rgba(#903, 0.125)
+    background-color: rgba(green, 0.125)
     display: inline-block
     margin: 0 auto
-    padding: 4px
+    padding: 4px 24px
 .intermission-note
     font-weight: normal
     font-size: 12px
@@ -194,9 +196,10 @@ footer
     justify-content: space-between
     align-items: stretch
     .participant
-        width: 30.5%
+        min-width: 117px
+        max-width: 117px
         padding: 0
-        margin: 4px
+        margin: 4px 4px 8px 4px
         text-align: center
         background-color: rgba(#fff,0.75)
         border: 1px solid #bfdb1b
@@ -268,3 +271,6 @@ table
             margin-bottom: 16px
     .bio
         padding: 4px 16px 16px 16px
+
+.close-modal
+    background-image: url('../images/close-icon.png') !important

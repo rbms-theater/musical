@@ -88,6 +88,24 @@
 
     $(document).ready(function(){
 
+        // handle selection states and smooth scrolling for top navigation items
+        $('.menu-items .item').click(function(el){
+            var selection = $(this)
+            var target = $(this).data('target')
+            $('.menu-items .item').removeClass('active')
+            selection.toggleClass('active')
+            // reload page to force content to true top
+            if (target === "home"){
+                location.reload();
+            } else {
+                // all other elements; set selection state and smooth scroll to top of target element
+                var targetEl = document.getElementById(target)
+                targetEl.scrollIntoView()
+                var wrapPosition = $('.content-wrapper').scrollTop()
+            }
+        })
+
+        // lazy-load image content to spead up initial page load
         $('.lazy').Lazy({
             scrollDirection: 'vertical',
             effect: 'fadeIn',
@@ -118,6 +136,7 @@
             }
         })
 
+        // instantiate modal pop-over
         $('a.modalTrigger').click(function(event) {
             //console.log(this)
             var headshotURL = $(this).find('img').attr('src')
@@ -127,7 +146,8 @@
             var bio = $(this).data('bio')
             var modalTemplate = '<div id="profileModal"><div class="headshot"><img src="'+headshotURL+'" /></div><div class="details"><div class="name">'+name+'</div><div class="grade">Grade '+grade+'</div><div class="role">'+role+'</div></div><div class="bio">'+bio+'</div></div>'
             $(modalTemplate).appendTo('body').modal({
-              fadeDuration: 150
+              fadeDuration: 100,
+              fadeDelay: 2
             });
             return false;
         });

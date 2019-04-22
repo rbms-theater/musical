@@ -13,10 +13,10 @@
 
     <nav>
         <div class="menu-items">
-            <img src="images/s-logo.png" />
-            <div>Synopsis</div>
-            <div>Musical Numbers</div>
-            <div>Cast & Creative</div>
+            <img src="images/s-logo.png" class="item" data-target="home" />
+            <div class="item" data-target="synopsis">Synopsis</div>
+            <div class="item" data-target="music">Musical Numbers</div>
+            <div class="item" data-target="team">Cast & Creative</div>
         </div>
     </nav>
 
@@ -54,7 +54,7 @@
                     Originally produced on Broadway by<br />
                     <strong>DreamWorks Theatricals</strong> and <strong>Neal Street Productions</strong>
                 </p>
-                <p>
+                <p id="synopsis">
                     Original Production Directed by<br />
                     <strong>Jason Moore</strong> and <strong>Rob Ashford</strong>.
                 </p>
@@ -71,7 +71,7 @@
                 </p>
             </section>
 
-            <section>
+            <section id="music">
                 <div class="separator">
                     <div class="line"></div>
                     <img src="images/onion.svg" />
@@ -92,7 +92,7 @@
                     <li>This is How a Dream Comes True</li>
                 </ul>
                 <h4>
-                    <div class="intermission">Intermission<br /><span class="intermission-note">(Approximately 15-minutes. Refreshments will be available for purchase in the RBMS Lobby)</span></div>
+                    <div class="intermission">Intermission<br /><span class="intermission-note">Refreshments will be available for purchase in the RBMS Lobby</span></div>
                 </h4>
                 <h3>Act 2</h3>
                 <ul class="music">
@@ -110,13 +110,13 @@
                 </div>
             </section>
 
-            <section class="lazy">
+            <section class="lazy" id="team">
                 <div class="separator">
                     <div class="line"></div>
                     <img src="images/dragon-alt.svg" />
                     <div class="line"></div>
                 </div>
-                <h2>Cast, Crew & Creative Team</h2>
+                <h2>Cast, Tech Crew & Creative Team</h2>
                 <div class="subsection cast">
                     <div class="subtitle">Cast Members</div>
                     <div class="note">(Listed in order of appearance)</div>
