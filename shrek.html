@@ -6,6 +6,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport" />
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="styles/shrekjr.css">
 </head>
 <body>
@@ -25,7 +26,10 @@
                 <p class="larger">
                     River Bend Middle School's
                 </p>
-                <p>Production of</p>
+                <p class="rundates">
+                    April 26&ndash;28 &amp; May 4&ndash;5, 2019
+                </p>
+                <p>production of</p>
                 <img src="images/mti-shrekjr-logo_400w.png" />
                 <div class="callouts">
                     <div class="callout">
@@ -54,9 +58,6 @@
                     Original Production Directed by<br />
                     <strong>Jason Moore</strong> and <strong>Rob Ashford</strong>.
                 </p>
-                <p class="rundates">
-                    April 26&ndash;28 &amp; May 4&ndash;5, 2019
-                </p>
             </section>
 
             <section class="synopsis">
@@ -78,56 +79,85 @@
                 </div>
                 <h2>Musical Numbers</h2>
                 <h3>Act 1</h3>
-                <ul>
-                    <li>Big Bright Beautiful World
-                    <li>Story of My Life
-                    <li>What's Up Duloc (Part 1)
-                    <li>What's Up Duloc (Part 2)
-                    <li>What's Up Duloc (Reprise)
-                    <li>I Know It's Today
-                    <li>Travel Song
-                    <li>Dragon Roar
-                    <li>Forever
-                    <li>This is How a Dream Comes True
+                <ul class="music">
+                    <li>Big Bright Beautiful World</li>
+                    <li>Story of My Life</li>
+                    <li>What's Up Duloc (<em>Part 1</em>)</li>
+                    <li>What's Up Duloc (<em>Part 2</em>)</li>
+                    <li>What's Up Duloc (<em>Reprise</em>)</li>
+                    <li>I Know It's Today</li>
+                    <li>Travel Song</li>
+                    <li>Dragon Roar</li>
+                    <li>Forever</li>
+                    <li>This is How a Dream Comes True</li>
                 </ul>
-                <h4>Intermission</h4>
+                <h4>
+                    <div class="intermission">Intermission<br /><span class="intermission-note">(Approximately 15-minutes. Refreshments will be available for purchase in the RBMS Lobby)</span></div>
+                </h4>
                 <h3>Act 2</h3>
-                <ul>
-                    <li>Morning Person
-                    <li>I Think I Got You Beat
-                    <li>Make a Move
-                    <li>Morning Person, Reprise
-                    <li>Freak Flag
-                    <li>Big Bright Beautiful World, Reprise
-                    <li>Finale
-                    <li>I'm a Believer
+                <ul class="music">
+                    <li>Morning Person</li>
+                    <li>I Think I Got You Beat</li>
+                    <li>Make a Move</li>
+                    <li>Morning Person, Reprise</li>
+                    <li>Freak Flag</li>
+                    <li>Big Bright Beautiful World, Reprise</li>
+                    <li>Finale</li>
+                    <li>I'm a Believer</li>
                 </ul>
                 <div class="attribution">
                     &ldquo;I’m A Believer&rdquo; (Neil Diamond) &copy; 1966 Stonebridge Music, Foray Music. All rights administered by Sony/ATV Music Publishing LLC (SESAC), on behalf of Stonebridge Music, and by Foray Music (SESAC). All rights reserved. Used by permission.
                 </div>
             </section>
 
-            <section>
+            <section class="lazy">
                 <div class="separator">
                     <div class="line"></div>
-                    <img src="images/dragon.svg" />
+                    <img src="images/dragon-alt.svg" />
                     <div class="line"></div>
                 </div>
-                <h2>Cast & Creative</h2>
-                <div class="record">
-                    <div class="row">
-                        <img src="images/headshots/Lily-Rossi.jpg" class="headshot" />
-                        <div class="title">
-                            <p class="name">Lily Rossi</p>
-                            <p class="role">Adult Fiona</p>
-                            <div class="expander">
-                                <img src="images/chevron-down.svg" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        Although Belle has been, and always will be, Lily’s favorite princess, she was more than excited to get the chance to play Adult Fiona in this year's RBMS production. She enjoys dancing at East Coast Edge, choreographing, and baking an impressive number of sweets. She would like to thank her family and friends for their support, her voice teacher Sarah for the tips, Mr. Simonton, and her dance friends and teachers for their endless laughter and kindness they have shown her throughout the process.
-                    </div>
+                <h2>Cast, Crew & Creative Team</h2>
+                <div class="subsection cast">
+                    <div class="subtitle">Cast Members</div>
+                    <div class="note">(Listed in order of appearance)</div>
+                    <div class="people castList"></div>
+                </div>
+
+                <div class="subsection crew">
+                    <div class="subtitle">Tech Crew Members</div>
+                    <div class="people crewList"></div>
+                </div>
+
+                <div class="subsection creative">
+                    <div class="subtitle">Creative Team</div>
+                    <table>
+                        <tbody>
+                            <tr><td class='role'>Director</td><td class='name'>Paul Simonton</td></tr>
+                            <tr><td class='role'>Book and Lyrics</td><td class="name">David Lindsay-Abaire (<a href="https://www.mtishows.com/people/david-lindsay-abaire" target="blank">MTI Bio</a>)</td></tr>
+                            <tr><td class='role'>Music</td><td class="name">Jeanine Tesori (<a href="https://www.mtishows.com/people/jeanine-tesori" target="blank">MTI Bio</a>)</td></tr>
+                            <tr><td class='role'>Direction <br /> (Orig. Broadway Production)</td><td class="name">Jason Moore (<a href="https://www.mtishows.com/people/jason-moore" target="blank">MTI Bio</a>) and <br />Rob Ashford (<a href="https://www.mtishows.com/people/rob-ashford" target="blank">MTI Bio</a>)</td></tr>
+                            <tr><td class='role'>Choreographers</td><td class='name'>Amanda Gworek, Amy Rossi</td></tr>
+                            <tr><td class='role'>Stage Managers</td><td class='name'>Saba Banaii and Cailin Flatla</td></tr>
+                            <tr><td class='role'>Art Design</td><td class='name'>Saba Banaii</td></tr>
+                            <tr><td class='role'>Carpenter</td><td class='name'>Ben Rossi</td></tr>
+                            <tr><td class='role'>Scenic Artists/Stagehands</td><td class='name'>Maria Pascual, Genus Riahi, Isaac Rossi</td></tr>
+                            <tr><td class='role'>Tech Director</td><td class='name'>Colton Wooldridge</td></tr>
+                            <tr><td class='role'>Vocal Coach</td><td class='name'>Rachel Binger</td></tr>
+                            <tr><td class='role'>Costume Designer</td><td class='name'>Carma Chemezova</td></tr>
+                            <tr><td class='role'>Costumers</td><td class='name'>Jodi Lenz, Meg LaFrancois, Christine Navin, Johanna Naranjo, and Stephanie Elieson</td></tr>
+                            <tr><td class='role'>Hair & Makeup</td><td class='name'>Jen Elmi, Johanna Naranjo</td></tr>
+                            <tr><td class='role'>Communications and Volunteer Coordination</td><td class='name'>MK Gregory</td></tr>
+                            <tr><td class='role'>Program Design and Materials</td><td class='name'>Chelsea Snyder, Ashley Holubek, and Adina Pantella</td></tr>
+                            <tr><td class='role'>Website</td><td class='name'>Ben Rossi</td></tr>
+                            <tr><td class='role'>Advertising</td><td class='name'>Adina Pantella</td></tr>
+                            <tr><td class='role'>Lobby Decorations</td><td class='name'>Kristin Epperson's Art Classes</td></tr>
+                            <tr><td class='role'>Concessions</td><td class='name'>Sherita Wilkins, Sanjita Sethi, and Beth Rogers</td></tr>
+                            <tr><td class='role'>Box Office</td><td class='name'>Brandi Saunders, Lisa Lee, Deb Shumaker, Joan Dutchess Freidson, Angie Ignazzitto, Jen Wike, and Linda Smith</td></tr>
+                            <tr><td class='role'>T-Shirt Design</td><td class='name'>Stephanie McMahan</td></tr>
+                            <tr><td class='role'>Cast Dinner</td><td class='name'>Claire Harris, MK Gregory, Fran Aslam, and Beth Rogers</td></tr>
+                            <tr><td class='role'>Theatre-gram & Flowers</td><td class='name'>Fran Aslam, Michelle Dykes</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
@@ -142,5 +172,8 @@
     </div>
 
     <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
