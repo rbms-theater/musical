@@ -3,6 +3,11 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
 body {
   display: flex;
   justify-content: center;
@@ -56,8 +61,6 @@ nav .menu-items .active {
   overflow-y: scroll;
   margin-top: 48px;
   max-width: 650px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 .content-wrapper .content-bg {
   background: #f2f5e2;
