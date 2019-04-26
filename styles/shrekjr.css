@@ -57,6 +57,7 @@ nav .menu-items .active {
   color: #e1e707;
 }
 .content-wrapper {
+  width: 100vw;
   height: 100vh;
   overflow-y: scroll;
   margin-top: 48px;
@@ -233,9 +234,9 @@ footer a:visited {
   align-items: stretch;
 }
 .people .participant {
-  min-width: 117px;
-  max-width: 117px;
-  padding: 0;
+  min-width: 118px;
+  max-width: 118px;
+  padding: 6px 0 0 0;
   margin: 4px 4px 8px 4px;
   text-align: center;
   background-color: rgba(255,255,255,0.75);
@@ -246,8 +247,8 @@ footer a:visited {
   align-items: center;
 }
 .people .participant img {
-  width: 117px;
-  height: 146px;
+  width: 102px;
+  height: 128px;
   background: url("../images/placeholder.png");
 }
 .people .participant p {
